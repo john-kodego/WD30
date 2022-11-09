@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+    
+    <h1>HTML Forms</h1>
+    <br />
+
+    <form>
+        <label for="firstName">First Name:</label>
+        <input 
+            type="text"
+            name="firstName" 
+            size="50"
+            maxlength="10"
+            minlength="3"
+            placeholder="First Name"
+            id="firstName"
+        />
+        <br /><br />
+
+        <label for="password">Password:</label>
+        <input 
+            type="password" 
+            id="password"
+            name="password"
+        />
+        <br /><br />
+
+        <label for="feedback">Feedback:</label>
+        <br />
+        <textarea 
+            name="feedback" 
+            id="feedback" 
+            cols="30" 
+            rows="10"
+            placeholder="Submit your Feedback"
+        ></textarea>
+        <br /><br />
+        
+        Programming languages: 
+        <br /><br />
+
+        <label for="javascript">JavaScript</label>
+        <input 
+            type="checkbox" 
+            name="progLanguage" 
+            id="javascript"
+            value="JavaScript"
+            checked
+        />
+
+        <label for="php">PHP</label>
+        <input 
+            type="checkbox" 
+            name="progLanguage" 
+            id="php"
+            value="PHP"
+        />
+
+        <label for="python">Python</label>
+        <input 
+            type="checkbox" 
+            name="progLanguage" 
+            id="python"
+            value="Python"
+        />
+        <br /><br />
+        
+        Enter your gender: 
+        <br /><br />
+        <label for="male">Male</label>
+        <input 
+            type="radio" 
+            name="gender" 
+            id="male"
+            value="male"
+        />
+
+        <label for="female">Female</label>
+        <input 
+            type="radio" 
+            name="gender" 
+            id="female"
+            value="female"
+        />
+
+        <label for="dontSay">Prefer not to say</label>
+        <input 
+            type="radio" 
+            name="gender" 
+            id="dontSay"
+            value="Prefer not to say"
+        />
+
+        <br /><br />
+        <label for="dropdown">Web Technology:</label>
+        <select 
+            name="dropdown" 
+            id="dropdown"
+        >
+            <option 
+                disabled
+                selected
+            >   
+                Please select
+            </option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+
+        </select>
+        <br /><br /> 
+        
+        Upload profile picture:
+        <input 
+            type="file" 
+            name="profilePic" 
+            accept="image/*"
+        >
+        <br /><br /> 
+
+        Enter Birthday: 
+        <input type="date" name="bday" />
+        <br /><br />
+
+        Range from 0 to 50:
+        <input 
+            type="range" 
+            name="range"
+            min="0"
+            max="50"
+            step="10"
+            value="0"
+        />
+        <br /><br />    
+        Pick a time:
+        <input type="time" name="time">
+        <br /><br />
+
+        Pick a month:
+        <input type="month" name="month">
+        <br /><br />
+
+        Pick a week:
+        <input type="week" name="week">
+        <br /><br />
+
+        Pick a color:
+        <input 
+            type="color" 
+            name="color" 
+            value="#42C5FF"
+        >
+        <br /><br />
+        Enter a number:
+        <input 
+            type="number" 
+            name="number" 
+            min="10"
+            max="99"
+        >
+        <br /><br />
+
+        <input type="button" value="Button 1" />
+        <br /><br /> 
+
+        <input type="reset" value="Reset" />
+        <br /><br /> 
+
+        <input type="submit" value="Register">
+
+        <br /><br /> <br /><br /> 
+
+    </form>
+
+</body>
+</html>
