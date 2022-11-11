@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semantic HTML</title>
+    <style>
+        header {
+            background-color: antiquewhite;
+            height: 70px;
+            border: 1px solid black;
+        }
+        nav {
+            background-color: gainsboro;
+            height: 50px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
 
@@ -25,13 +37,33 @@
             </section>
             <section>
                 <figure>
-                    <img src="https://placeimg.com/640/480/any" alt="Picture of a something">
+                    <img src="https://placeimg.com/640/480/animals" alt="Picture of something">
                     <figcaption>This is a random picture</figcaption>
                 </figure>
             </section>
-            
+            <section>
+                <!-- <video src="./planet.mp4"></video> -->
+                <video controls autoplay muted loop>
+                    <source src="./planet.mp4" type="video/mp4" />
+                    Your browser does not support this video.
+                </video>
+            </section>
+            <section>
+                <audio controls>
+                    <source src="./audio.mp3" type="audio/mpeg" />
+                </audio>
+            </section>
         </article>
+        <aside>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut pariatur consequuntur dolorum sapiente possimus architecto excepturi id harum! Excepturi quos aspernatur praesentium molestias accusantium esse? Voluptatum molestias harum vel repellat.</p>
+        </aside>
+
     </main>
+
+    <footer>
+        <p>Email me at john@kodego.ph</p>
+        <p>Copyright 2022</p>
+    </footer>
 
 </body>
 </html>
