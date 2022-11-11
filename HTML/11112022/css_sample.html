@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Samples</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Text examples */
+        .bigspace {
+            letter-spacing: 5px;
+        }
+        p.lowercase {
+            text-transform: lowercase;
+            font-style: italic;
+            font-size: 32px;
+            color: crimson;
+        }
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .capitalized {
+            text-transform: capitalize;
+        }
+        /* CSS List Examples */
+        ul.square {
+            list-style: square;
+        }
+        ul.circle {
+            list-style: circle;
+        }
+        ul.nostyle {
+            list-style: none;
+        }
+        ul.nostyle li a {
+            text-decoration: none;
+            color: tomato;
+            font-size: 18px;
+        }
+    </style>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <h1 style="color:firebrick; text-align: center;">CSS Examples</h1>
+
+    <!-- CSS Text examples -->
+    <p style="
+        color:brown; 
+        font-size: 24px;
+        font-weight: 500;
+        font-family: 'Raleway', sans-serif;
+    ">Lorem ipsum dolor sit amet.</p>
+    <p style="text-decoration:underline;">Lorem ipsum dolor sit amet.</p>
+    <p style="text-decoration:overline;">Lorem ipsum dolor sit amet.</p>
+    <p style="text-decoration:line-through;">Lorem ipsum dolor sit amet.</p>
+    <a href="#" style="
+        text-decoration:none;
+        color: darkviolet;
+    ">Lorem, ipsum dolor.</a>
+
+    <p style="text-align:left;">Lorem ipsum dolor sit amet.</p>
+    <p style="text-align:right;">Lorem ipsum dolor sit amet.</p>
+
+    <p class="bigspace">Lorem ipsum dolor sit amet.</p>
+    <p class="lowercase">Lorem ipsum dolor sit amet.</p>
+    <p class="uppercase">Lorem ipsum dolor sit amet.</p>
+    <p class="capitalized">Lorem ipsum dolor sit amet.</p>
+
+    <h2>CSS List Examples</h2>
+
+    <ul class="square">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <ul class="circle">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <ul class="nostyle">
+        <li>
+            <a href="#">
+                Item 1
+            </a>
+        </li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+    </ul>
+
+    <div id="div1">
+        Div 1
+    </div>
+
+    <div class="div2 div3">
+        Div with 2 classes
+    </div>
+
+    <div class="div4">
+        Div 4
+    </div>
+
+</body>
+
+</html>
