@@ -53,12 +53,67 @@
             border-right: 2px dashed red;
             border-bottom: 3px double green;
             border-left: 4px groove blue;
+
+            /* margin shorthand property */
+            /* 
+                margin-top: 10px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+            */
+            margin: 20px 15px 10px 5px;
         }
+        .navigation {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .navigation li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .navigation li a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        /* pseudo-class */
+        .navigation li a:hover {
+            text-decoration: underline;
+            color: red;
+        }
+        .navigation li a:visited {
+            color: darkblue;
+        }
+        .box7 {
+            border: 1px solid black;
+            padding: 20px;
+        }
+        .box7:hover p {
+            color: darkviolet;
+        }
+        .parent li:first-child {
+            color: fuchsia;
+            font-size: 24px;
+        }
+        .parent li:nth-child(3) {
+            color: royalblue;
+            font-size: 30px;
+        }
+        .parent li:last-child {
+            color: darkgoldenrod;
+            font-size: 34px;
+        }
+        .parent li:nth-child(even) {
+            color: teal;
+            font-size: 40px;
+        }
+
     </style>
 </head>
 
 <body>
-    <h1>CSS Display Properties</h1>
+    <h1>CSS Display Property</h1>
     <div class="box box1"></div>
     <div class="box box2"></div>
     <div class="box box3"></div>
@@ -67,5 +122,31 @@
     <div class="box6">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, enim?
     </div>
+
+    <ul class="navigation">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">About Us</a>
+        </li>
+        <li>
+            <a href="#">Contact Us</a>
+        </li>
+    </ul>
+
+    <div class="box7">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, quam.
+        </p>
+    </div>
+
+    <ul class="parent">
+        <li>1st Child</li>
+        <li>2nd Child</li>
+        <li>3rd Child</li>
+        <li>4th Child</li>
+        <li>5th Child</li>
+    </ul>
 </body>
 </html>
