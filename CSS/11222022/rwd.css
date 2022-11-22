@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+@media screen and (max-width: 700px) {
+    body {
+        background-color: tomato;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+    body {
+        background-color: darkslateblue;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    body {
+        background-color: deeppink;
+    }
+}
