@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.gradient {
+    border: 2px solid black;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(30, 39, 195, 1) 50%);
+}
+
+.container {
+    width: 60%;
+    height: 80%;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.left,
+.right {
+    width: 50%;
+    padding: 30px;
+}
+
+.left {
+    background-image: url(https://placeimg.com/640/480/arch);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
