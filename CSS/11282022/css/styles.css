@@ -1,0 +1,82 @@
+.btn-white, .btn-navy {
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0 15px;
+  min-height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-navy {
+  color: #fff;
+  background-color: #161A67;
+  border: 1px solid #161A67;
+}
+.btn-white {
+  color: #161A67;
+  background-color: #fff;
+  border: 1px solid #161A67;
+}
+
+nav {
+  padding: 20px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: #000;
+}
+nav ul li a.active, nav ul li a:hover {
+  color: violet;
+  text-decoration: underline;
+}
+@media screen and (max-width: 1200px) {
+  nav ul li a {
+    color: #fff;
+    background-color: #161A67;
+  }
+}
+
+.message {
+  font-size: 24px;
+  font-family: "Impact";
+  font-weight: 500;
+  color: #464a96;
+}
+
+.sample {
+  font-size: 32px;
+  font-family: Arial;
+  font-weight: 800;
+  color: lightblue;
+}
+
+.warning {
+  font-size: 24px;
+  font-weight: bold;
+  color: yellow;
+  border: 1px solid black;
+  padding: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .warning {
+    font-size: 16px;
+    color: #1e1e1e;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

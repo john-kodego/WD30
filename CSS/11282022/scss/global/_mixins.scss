@@ -1,0 +1,26 @@
+// mixin w/ parameters
+@mixin font-style(
+    $font-size,
+    $font-family,
+    $font-weight,
+    $color
+) {
+    font-size:      $font-size;
+    font-family:    $font-family;
+    font-weight:    $font-weight;
+    color:          $color;
+}
+
+// mixin w/o parameters
+@mixin warning-message {
+    font-size: $desktop-font;
+    font-weight: bold;
+    color: yellow;
+    border: 1px solid black;
+    padding: 20px;
+
+    @media screen and (max-width: 1200px) {
+        font-size: $mobile-font;
+        color: $text;
+    }
+} 

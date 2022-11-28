@@ -1,0 +1,31 @@
+nav {
+    padding: 20px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+
+            a {
+                display: block;
+                padding: 6px 12px;
+                text-decoration: none;
+                color: $black;
+
+                &.active,
+                &:hover {
+                    color: violet;
+                    text-decoration: underline;
+                }
+
+                @media screen and (max-width: 1200px) {
+                    color: $white;
+                    background-color: $primary-blue;
+                }
+            }
+        }
+    }
+}

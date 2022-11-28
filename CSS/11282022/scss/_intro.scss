@@ -1,0 +1,11 @@
+.message {
+    @include font-style($desktop-font, $impact, 500, $secondary-blue);
+}
+
+.sample {
+    @include font-style(32px, Arial, 800, lightblue);
+}
+
+.warning {
+    @include warning-message;
+}
