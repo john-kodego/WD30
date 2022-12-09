@@ -130,17 +130,34 @@ if (example) {
 // Loops
 let num = 0;
 // while loop
-while (num < 5) //condition
-{ 
-    // code block
-    console.log(num++);
-}
+// while (num < 5) //condition
+// { 
+//     // code block
+//     console.log(num++);
+// }
 num = 5;
 // while loop
-while (num > 0) //condition
-{ 
-    // code block
-    console.log(num--);
+// while (num > 0) //condition
+// { 
+//     // code block
+//     console.log(num--);
+// }
+
+// do... while loop
+// num = 0;
+// do {
+//     console.log(num++);
+// } while (num < 5);
+
+// for loop
+// for (initialization; condition; post-loop operation)
+// check condition
+// if true execute code
+// post-loop operation
+for (let i = 0; i < 5; i++) {
+    if(i === 3) {
+        console.log("The number 3");
+    }
 }
 
 
