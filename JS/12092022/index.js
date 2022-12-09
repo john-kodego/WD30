@@ -161,9 +161,45 @@ for (let i = 0; i < 5; i++) {
 }
 
 // Prompt user input
-const input = Number( prompt("Enter a number: ") );
+// const input = Number( prompt("Enter a number: ") );
 
 // const numSample = Number("50");
-console.log(input + 25);
+// console.log(input + 25);
+
+/************************************** 
+ * Functions
+*/ 
+
+// Function Declaration
+function add(num1, num2) {
+    return num1 + num2;
+}
+
+// () = invoker
+const sum1 = add(10, 5); // 15
+console.log(sum1);
+// const sum2 = add(50, 99);
+
+// Function Expression
+const subtract = function(num1, num2) {
+    return num1 - num2;
+}
+const diff1 = subtract(80, 50);
+console.log(diff1);
+// const diff2 = subtract;
+// console.log(diff2);
+
+// Arrow Function
+// const multiply = (num1, num2) => {
+//     // other code here
+//     return num1 * num2;
+// }
+const multiply = (num1, num2) => num1 * num2;
+const product1 = multiply(5,8);
+console.log(product1);
+
+// Parameterless function
+const greetMe = () => alert("Hello Someone!");
+greetMe();
 
 
