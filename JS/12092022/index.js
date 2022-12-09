@@ -160,4 +160,10 @@ for (let i = 0; i < 5; i++) {
     }
 }
 
+// Prompt user input
+const input = Number( prompt("Enter a number: ") );
+
+// const numSample = Number("50");
+console.log(input + 25);
+
 
