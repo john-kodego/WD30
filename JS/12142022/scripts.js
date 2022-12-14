@@ -102,7 +102,75 @@ const combined = [ ...letters, ...letters2 ];
 console.log(combined);
 
 // using numbers array
+// [9, 3, 5, 6, 7, 1]
 // Find the 2nd highest value
+
+/** Solution 1
+ * Find the highest value
+ * Get index of highest value
+ * Remove highest value from array
+ * Get the highest value again
+ * 
+ */
+console.log(numbers);
+const sol1 = (arr) => {
+    const numbers = [...arr];
+
+    const highest = Math.max(...numbers);
+    const highestIndex = numbers.indexOf(highest);
+    numbers.splice(highestIndex, 1);
+    const second = Math.max(...numbers);
+    console.log(second);
+}
+// sol1(numbers);
+
+/** Solution 2
+ * Sort array in descending order
+ * return the 2nd item in the sorted array
+ */
+const sol2 = (arr) => {
+    const numbers = [...arr];
+    // array.sort() method
+    numbers.sort( 
+
+        (a, b) => {
+            // if return value > 0 (positive), sort a after b
+
+            // if return value < 0 (negative), sort a before b
+
+            // if return value === 0, keep original order
+
+            // return a - b; //ascending order
+            return b - a; //descending order
+        }
+    );
+    console.log(numbers[1]);
+}
+// sol2(numbers);
+
+/** Solution 3
+ * let highest, secondHighest
+ * check every number in the array
+ * if array[i] > highest, highest = array[i]
+ * if array[i] < highest && array[i] > secondHighest, secondHighest = array[i]
+ * return secondHighest
+ */
+const getSecondHighest = (arr) => {
+    let highest = -Number.MIN_VALUE;
+    let secondHighest = -Number.MIN_VALUE;
+
+    for(let i = 0; i < arr.length; i++) {
+        if( arr[i] > highest) {
+            secondHighest = highest;
+            highest = arr[i];
+        }
+        else if ( arr[i] > secondHighest && arr[i] < highest ) {
+            secondHighest = arr[i];
+        }
+    }
+    console.log(secondHighest);
+}
+getSecondHighest(numbers);
 
 
 
