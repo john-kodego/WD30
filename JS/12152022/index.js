@@ -73,9 +73,55 @@ const getSum = ( message, ...numbers) => {
     console.log(message);
     return sum;
 }
-console.log( getSum(1, 2) ); // 3
-console.log( getSum(1, 2, 3, 4, 5) ); // 15
-console.log( getSum("Hello!", 1,3,2,5,6,7,81,2,3) )
+// console.log( getSum(1, 2) ); // 3
+// console.log( getSum(1, 2, 3, 4, 5) ); // 15
+// console.log( getSum("Hello!", 1,3,2,5,6,7,81,2,3) )
 //                 ( message, ...numbers)
+
+
+// Destructure / Destructuring
+// Destructuring assignment
+
+// Array Destructuring
+const highestMMR = [ "Jason", "Jam", "Raymart" ];
+// old way
+// const gold = highestMMR[0];
+// const silver = highestMMR[1];
+// const bronze = highestMMR[2];
+
+// new way
+// Array Destructuring
+const [ gold, silver, bronze ] = highestMMR;
+// console.log(gold, silver, bronze);
+const [ highest, ...everyoneElse ] = highestMMR
+console.log(highest);
+console.log(everyoneElse);
+
+// Object Destructuring
+const person = {
+    firstName: "Bruce",
+    lastName: "Wayne",
+    city: "Gotham",
+    title: "Batman"
+}
+// const firstName = person.firstName;
+// const lastName = person.lastName;
+// const city = person.city;
+// propertyName: variableName
+const { city, firstName: fName, lastName: lName } = person;
+// console.log(fName);
+// console.log(lastName);
+// console.log(city);
+
+// Parameter Destructuring
+// const getFullName = (object) => {
+//     return `${object.firstName} ${object.lastName}`
+// }
+const getFullName = ( { firstName, lastName } ) => {
+    return `${firstName} ${lastName}`
+}
+console.log( getFullName(person) );
+
+
 
 
