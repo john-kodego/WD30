@@ -48,9 +48,9 @@ link1.setAttribute("class", "link");
 const links = document.querySelectorAll("ul li a");
 links[1].setAttribute("href", "https://yahoo.com");
 
-for(let link of links) {
-    link.innerText = "I AM A LINK!!!";
-}
+// for(let link of links) {
+//     link.innerText = "I AM A LINK!!!";
+// }
 
 
 // Element style
@@ -111,10 +111,39 @@ const item = document.createElement( "li" );
 // console.dir(item);
 item.innerText = "I am a new li element";
 item.classList.add("green");
-
 menu.appendChild(item);
 
+const item2 = document.createElement( "li" );
+const anchor = document.createElement( "a" );
 
+anchor.append("Click Me!");
+anchor.href = "https://bing.com";
+
+item2.append(anchor);
+menu.append(item2, 'another text');
+
+const item3 = document.createElement( "li" );
+item3.append("I will be the first child");
+menu.prepend(item3);
+
+const before = document.createElement("li");
+const after = document.createElement("li");
+before.append("I am before green");
+after.append("I am after green");
+
+item.insertAdjacentElement( "beforebegin", before );
+item.insertAdjacentElement( "afterend", after );
+
+
+// Remove Child
+// parentElement.removeChild()
+const firstItem = document.querySelector( "#menu li" );
+menu.removeChild( firstItem );
+
+// Remove an element
+// element.remove()
+demo.remove();
+console.log( demo.parentElement );
 
 
 
