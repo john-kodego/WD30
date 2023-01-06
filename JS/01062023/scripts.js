@@ -75,3 +75,10 @@ checkAll.addEventListener(
         );
     }
 );
+
+/*
+    Toggle Button, Colors checkboxes
+    When toggle button is clicked:
+        1. If 1 or more checkboxes is unchecked, check all
+        2. Else, uncheck all
+*/
