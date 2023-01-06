@@ -15,7 +15,7 @@ const fruitsForm = document.querySelector('#fruits');
 
 fruitsForm.addEventListener(
     "submit",
-    () => {
+    (e) => {
         /*
         1. Prevent default form submission
         2. Get the value of fruit and quantity
@@ -24,5 +24,23 @@ fruitsForm.addEventListener(
         5. Append the new li element to the ul id=list
         6. Reset inputs / set input value to empty
         */
+        e.preventDefault();
+        const fruit = document.querySelector('#fruit');
+        const quantity = document.querySelector('#quantity');
+        const list = document.querySelector('#list');
+        // inputElement.value
+        const item = document.createElement('li');
+        // item.innerText = `${quantity.value} ${fruit.value}`
+        // item.textContent = `${quantity.value} ${fruit.value}`
+        item.append(`${quantity.value} ${fruit.value}`);
+
+        list.append(item);
+
+        // reset form element inputs
+        fruitsForm.reset();
+
+        // set input value to empty
+        // quantity.value = "";
+        // fruit.value = "";
     }
 )
