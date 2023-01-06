@@ -95,3 +95,33 @@ checkAll.addEventListener(
         // uncheck all checkboxes
     }
 */
+
+const btnToggle = document.querySelector('#toggle');
+const colors = document.querySelectorAll('input[name="colors"]');
+// [input, input, input, input]
+
+btnToggle.addEventListener(
+    "click",
+    () => {
+        let allChecked = true;
+        colors.forEach(
+            (color) => {
+                if( !color.checked ) {
+                    allChecked = false;
+                }
+            }
+        );
+        if( !allChecked ) {
+            // check all checkboxes
+            colors.forEach(
+                (color) => {
+                    color.checked = true
+                }
+            )
+        } 
+        else {
+            // uncheck all checkboxes
+            colors.forEach( color => color.checked = false );
+        }
+    }
+);
