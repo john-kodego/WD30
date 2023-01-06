@@ -81,4 +81,17 @@ checkAll.addEventListener(
     When toggle button is clicked:
         1. If 1 or more checkboxes is unchecked, check all
         2. Else, uncheck all
+    
+    assume all checkboxes are checked
+    let allChecked = true;
+
+    loop for each checkbox in checkboxes collection
+        if 1 or more checkboxes is not checked, allChecked = false
+
+    if( !allChecked ) {
+        // check all checkboxes
+    } 
+    else {
+        // uncheck all checkboxes
+    }
 */
