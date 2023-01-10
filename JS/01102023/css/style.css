@@ -1,0 +1,23 @@
+.initialBar {
+    background-color: lightgreen;
+    width: 40px;
+    height: 100px;
+}
+
+.interestBar {
+    background-color: lightpink;
+    width: 40px;
+    height: 0;
+}
+
+.diagram th {
+    padding-left: 20px;
+}
+.diagram td {
+    text-align: center;
+    padding: 10px;
+    vertical-align: bottom;
+}
+.diagram div {
+    margin: auto;
+}

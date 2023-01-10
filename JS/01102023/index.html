@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h2>Investment Form</h2>
+    <form id="investment">
+
+        <table>
+            <tr>
+                <td>
+                    <label for="money">Initial Deposit</label>
+                </td>
+                <td>
+                    <input type="number" name="money" id="money" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="months">How many months?</label>
+                </td>
+                <td>
+                    <select name="months" id="months">
+                        <option value="3">3 (minimum)</option>
+                        <option value="6">6 (half-year)</option>
+                        <option value="12">12 (1 year)</option>
+                        <option value="18">18 (1.5 years)</option>
+                        <option value="24">24 (2 years)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="interest">Interest per year (%)</label>
+                </td>
+                <td>
+                    <input type="number" name="interest" id="interest" required>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <table class="diagram">
+        <tr>
+            <th>Initial Amount</th>
+            <th>With Interest</th>
+        </tr>
+        <tr>
+            <th id="initialAmount"></th>
+            <th id="withInterest"></th>
+        </tr>
+        <tr>
+            <td>
+                <div class="initialBar"></div>
+            </td>
+            <td>
+                <div class="interestBar"></div>
+            </td>
+        </tr>
+    </table>
+
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
