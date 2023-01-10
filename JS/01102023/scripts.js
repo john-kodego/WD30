@@ -16,6 +16,10 @@ const calculate = () => {
     }
     
     const result = initialDeposit + (initialDeposit * interestValue * monthsValue);
+                // 10000 + (10000 * 0.12 * 1) = 11200
+    const height = ( (result / initialDeposit) * 100) + "px";
+                // (11200 / 10000) = 1.12 * 100 = 112px
+    interestBar.style.height = height;
 
     initialAmount.innerText = initialDeposit.toLocaleString(
         'en-US',
@@ -24,7 +28,6 @@ const calculate = () => {
             currency: 'PHP'
         }
     );
-
     withInterest.innerText = result.toLocaleString(
         'en-US',
         {
@@ -32,8 +35,6 @@ const calculate = () => {
             currency: 'PHP'
         }
     );
-
-    console.log(result);
 }
 
 calculate();
