@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="reviewForm">
+        <label for="title">Movie Title:</label>
+        <input type="text" name="title" id="title">
+        <br><br>
+
+        <label for="year">Year Shown:</label>
+        <input type="text" name="year" id="year">
+        <br><br>
+
+        <label for="review">Review:</label> <br>
+        <textarea name="review" id="review" cols="30" rows="10"></textarea>
+        <br><br>
+
+        <input type="submit" value="Add Review">
+    </form>
+
+    <div id="display">
+        <pre></pre>
+    </div>
+
+    <button id="retrieveBtn">Retrieve from Local Storage</button>
+    <table id="reviewsTable" width="80%" border="1px">
+        <tr>
+            <th>Review ID</th>
+            <th>Movie Title</th>
+            <th>Year Shown</th>
+            <th>Review</th>
+        </tr>
+    </table>
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>
