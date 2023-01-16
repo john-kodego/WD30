@@ -49,7 +49,7 @@ console.log( isRightTriangle(3, 4, 5) ); // true
 //     })
     
 // Unsplash Access Key
-// YOUR_ACCESS_KEY
+// wGvg3zZtaWCZZHVyMmHVz89smUCwOeuOF_AnuUiQGPs
 // https://api.unsplash.com/
 // /search/photos
 // Authorization: Client-ID YOUR_ACCESS_KEY
@@ -79,13 +79,22 @@ const requestOptions = {
 
 const output = document.querySelector('#output');
 
+const searchTerm = document.querySelector('#search');
+const searchBtn = document.querySelector('#searchBtn');
+/*
+    When searchBtn is clicked:
+    get value of searchTerm
+    assign search term to query (?query=searchTerm)
+    https://api.unsplash.com/search/photos?query=searchTerm   
+    do the request
+*/
+
 fetch( requestURL, requestOptions )
     .then(res => {
         return res.json();
     })
     .then(result => {
         console.log(result);
-
         for ( let photo of result.results ) {
             // photo.urls.small
             const imageContainer = document.createElement('div');
@@ -96,7 +105,6 @@ fetch( requestURL, requestOptions )
             imageContainer.append(image);
             output.append(imageContainer);
         }
-
     })
     .catch(err => {
         console.log(err);
