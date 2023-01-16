@@ -36,10 +36,19 @@ retrieveBtn.addEventListener(
 
         for (let review of reviews) {
             // create / insert a new table row
+            const row = reviewsTable.insertRow();
 
             // create / insert cells inside new table row
+            const idCell = row.insertCell();
+            const titleCell = row.insertCell();
+            const yearCell = row.insertCell();
+            const reviewCell = row.insertCell();
 
             // insert values to the table cells
+            idCell.innerText = review.id;
+            titleCell.innerText = review.title;
+            yearCell.innerText = review.year;
+            reviewCell.innerText = review.review;
         }
     }
 );
