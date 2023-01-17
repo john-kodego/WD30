@@ -103,6 +103,8 @@ searchBtn.addEventListener(
             })
             .then(result => {
                 console.log(result);
+                // output.textContent = '';
+                output.replaceChildren();
                 for ( let photo of result.results ) {
                     // photo.urls.small
                     const imageContainer = document.createElement('div');
