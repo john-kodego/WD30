@@ -60,8 +60,8 @@ console.log( isRightTriangle(3, 4, 5) ); // true
 
 const baseURL = "https://api.unsplash.com/";
 const search = "search/photos";
-const query = "?query=landscape";
-const requestURL = baseURL + search + query;
+const query = "?query=";
+// const requestURL = baseURL + search + query;
 // https://api.unsplash.com/search/photos?query=cars
 
 const ACCESS_KEY = "wGvg3zZtaWCZZHVyMmHVz89smUCwOeuOF_AnuUiQGPs";
@@ -89,23 +89,35 @@ const searchBtn = document.querySelector('#searchBtn');
     do the request
 */
 
-fetch( requestURL, requestOptions )
-    .then(res => {
-        return res.json();
-    })
-    .then(result => {
-        console.log(result);
-        for ( let photo of result.results ) {
-            // photo.urls.small
-            const imageContainer = document.createElement('div');
-            const image = document.createElement('img');
+searchBtn.addEventListener(
+    'click',
+    () => {
+        const term = searchTerm.value;
+        const queryTerm = query + term;
+        const queryURL = baseURL + search + queryTerm;
+        // https://api.unsplash.com/search/photos?query=searchTerm   
 
-            image.src = photo.urls.small;
+        fetch( queryURL, requestOptions )
+            .then(res => {
+                return res.json();
+            })
+            .then(result => {
+                console.log(result);
+                for ( let photo of result.results ) {
+                    // photo.urls.small
+                    const imageContainer = document.createElement('div');
+                    const image = document.createElement('img');
 
-            imageContainer.append(image);
-            output.append(imageContainer);
-        }
-    })
-    .catch(err => {
-        console.log(err);
-    })
+                    image.src = photo.urls.small;
+
+                    imageContainer.append(image);
+                    output.append(imageContainer);
+                }
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+)
+
+
